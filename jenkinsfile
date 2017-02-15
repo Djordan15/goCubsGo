@@ -20,21 +20,25 @@ submoduleCfg:[], userRemoteConfigs:[[credentialssId:
 
 
 stage 'BUILD'
-    
+  
+echo 'Build begin' 
+   
 
 def mvnHome= tool 'm3'
     
 
 sh "${mvnHome}/bin/mvn -B verify"
-    
-
+ 
 
 echo 'hello from build stage'
+
     
     
 
 
 stage 'FINISHED'
     
+
 echo 'last stage'
+
 }
